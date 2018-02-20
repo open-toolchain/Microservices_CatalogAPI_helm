@@ -36,9 +36,7 @@
     };    
     
     global.cloudantService = {
-        credentials: {
-            url: "https://abc"
-        }
+        url: "https://abc"
     };
 
     //var cdb = rewire('../../tests/server/coverage/instrumented/routes/db.js');

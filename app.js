@@ -1,12 +1,13 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var cfenv = require("cfenv");
 var path = require('path');
 var cors = require('cors');
 
-//Setup Cloudant Service.
-var appEnv = cfenv.getAppEnv();
-cloudantService = appEnv.getService("myMicroservicesCloudant");
+console.log("PROCESS.ENV --------");
+console.log(process.env);
+
+//Retrieve Cloudant credentials from env variables
+cloudantService = JSON.parse(process.env.CLOUDANT_SERVICE);
 var items = require('./routes/items');
 
 //Setup middleware.
@@ -27,5 +28,5 @@ app.post('/items', items.create);
 app.put('/items/:id', items.update);
 app.delete('/items/:id', items.remove);
 
-app.listen(appEnv.port, appEnv.bind);
-console.log('App started on ' + appEnv.bind + ':' + appEnv.port);
+app.listen(process.env.PORT);
+console.log('App started on ' + process.env.PORT);

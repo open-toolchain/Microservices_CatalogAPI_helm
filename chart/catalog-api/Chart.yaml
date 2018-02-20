@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart for a Kubernetes app
+name: catalog-api
+version: 1.0

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A microservices sample catalog API.",
   "scripts": {
-    "start": "node app.js"
+    "start": "node /app/app.js"
   },
   "engines": {
     "node": "^4.6",
@@ -12,7 +12,7 @@
   "dependencies": {
     "body-parser": "1.12.x",
     "cfenv": "1.0.x",
-    "cloudant": "*",
+    "cloudant": ">=1.10",
     "consolidate": "0.11.x",
     "cors": "2.5.x",
     "express": "3.20.x"
