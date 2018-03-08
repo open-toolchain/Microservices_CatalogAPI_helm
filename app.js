@@ -28,5 +28,5 @@ app.post('/items', items.create);
 app.put('/items/:id', items.update);
 app.delete('/items/:id', items.remove);
 
-app.listen(process.env.PORT);
-console.log('App started on ' + process.env.PORT);
+app.listen(process.env.WEB_PORT);
+console.log('App started on ' + process.env.WEB_PORT);
