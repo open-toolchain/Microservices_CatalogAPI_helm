@@ -1,5 +1,5 @@
 #!/bin/bash
-GRUNTFILE="./Gruntfile.js"
+GRUNTFILE="./tests/Gruntfile.js"
 if [ -f $GRUNTFILE ]; then
 export PATH=/opt/IBM/node-v4.2/bin:$PATH
 npm install -g npm@3.7.2 ### work around default npm 2.1.1 instability
