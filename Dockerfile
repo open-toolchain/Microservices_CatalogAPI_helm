@@ -15,6 +15,8 @@
 FROM node:alpine
 LABEL maintainer="philippe_mulet@fr.ibm.com"
 
+RUN apk update && apk upgrade
+
 # Install the application
 # ADD package.json /app/package.json
 # RUN cd /app && npm install
@@ -22,10 +24,6 @@ LABEL maintainer="philippe_mulet@fr.ibm.com"
 # ENV WEB_PORT 80
 # EXPOSE  80
 
-# Install app dependencies
-COPY package.json /app/
-# RUN cd /app; npm install --production
-RUN cd /app; npm install
 COPY . /app
 
 # Support to for arbitrary UserIds
@@ -33,6 +31,12 @@ COPY . /app
 RUN chmod -R u+x /app && \
     chgrp -R 0 /app && \
     chmod -R g=u /app /etc/passwd
+
+# RUN cd /app; npm install --production
+
+# Install app dependencies
+COPY package.json /app/
+RUN cd /app; npm install
 
 #ENV NODE_ENV production
 ENV WEB_PORT 8080
