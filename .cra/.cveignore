@@ -1,7 +1,10 @@
 [
     {
+        "cve": "SNYK-ALPINE315-MUSL-1928332",
+        "alwaysOmit": true
+    },
+    {
         "cve": "SNYK-ALPINE314-MUSL-1307176",
-        "expiration": "2021-12-31T22:08:41+04:00",
-        "comment": "waiting on dependency fix"
+        "alwaysOmit": true
     }
 ]
