@@ -18,7 +18,7 @@
   },
   "repository": {},
   "devDependencies": {
-    "async": "^1.5.2",
+    "async": "^3.2.2",
     "chai": "^3.4.1",
     "chai-as-promised": "6.0.0",
     "colors": "latest",
